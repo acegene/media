@@ -14,7 +14,7 @@ function _src {
     $global:GWSM = $dir_repo
     # $env:PATH += ";$($dir_bin)"
     #### aliases
-    function global:gwsm {cd $global:GWSM && git status -sb}
+    function global:gwsm {cd $global:GWSM; if($?){git status -sb}}
 }
 
 _src @args
