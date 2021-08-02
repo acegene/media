@@ -7,13 +7,13 @@ $ErrorActionPreference = "Stop"
 function __backup {
     Param(
         [Parameter(Mandatory, Position=0)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $file,
         [Parameter(Mandatory, Position=1)]
         [ValidateNotNullOrEmpty()]
         [object] $dir_dest,
         [Parameter(Mandatory, Position=2)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $date,
         [Parameter(Mandatory, Position=3)]
         [ValidateSet('cp','mv')]
@@ -37,19 +37,19 @@ function __backup {
 function __copy_backup {
     Param(
         [Parameter(Mandatory, Position=0)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $file,
         [Parameter(Mandatory, Position=1)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $dir_src,
         [Parameter(Mandatory, Position=2)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $dir_dest,
         [Parameter(Mandatory, Position=3)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $dir_backup,
         [Parameter(Mandatory, Position=4)]
-        [ValidateNotNullOrEmpty()] 
+        [ValidateNotNullOrEmpty()]
         [object] $date
     )
     #### convert arguments
@@ -62,7 +62,7 @@ function __copy_backup {
         if(!((Get-FileHash "$($dir_src)\$($file.name)").Hash -eq (Get-FileHash "$($dir_dest)\$($file.name)").Hash)){
             Write-Host "WARNING: existing deck: $($dir_dest)\$($file.name)"
             $confirmation = Read-Host -Prompt "PROMPT: differences were found between $($dir_src)\$($file.name) and $($dir_dest)\$($file.name), backup and overwrite $($dir_dest)\$($file.name)? y/n"
-            if ("$confirmation" -eq 'yes' -Or "$confirmation" -eq 'y') {       
+            if ("$confirmation" -eq 'yes' -Or "$confirmation" -eq 'y') {
                 __backup "$($dir_dest)\$($file.name)" "$dir_backup" "$date" "mv"
             }else{
                 continue
@@ -86,7 +86,7 @@ function __import {
     if ("$confirmation" -eq 'yes' -Or "$confirmation" -eq 'y') {
         #### import all decks, prompting to back them up if they already exist and are different
         foreach ($deck in $decks_src){
-            __copy_backup "$($dir_deck_src)\$($deck.name)" $dir_deck_src $dir_deck $dir_deck_backup $date 
+            __copy_backup "$($dir_deck_src)\$($deck.name)" $dir_deck_src $dir_deck $dir_deck_backup $date
         }
     }else{
         Write-Host "INFO: aborting..."
@@ -102,7 +102,7 @@ function __save {
     if ("$confirmation" -eq 'yes' -Or "$confirmation" -eq 'y') {
         #### save all decks, prompting to back them up if they already exist and are different
         foreach ($deck in $decks){
-            __copy_backup "$($dir_deck)\$($deck.name)" $dir_deck $dir_deck_src $dir_deck_backup $date 
+            __copy_backup "$($dir_deck)\$($deck.name)" $dir_deck $dir_deck_src $dir_deck_backup $date
         }
     }else{
         Write-Host "INFO: aborting..."

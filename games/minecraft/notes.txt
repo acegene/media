@@ -1,33 +1,33 @@
 
 
 glossary:
-	ow = overworld/overworld-located
-	ne = nether/nether-located
+    ow = overworld/overworld-located
+    ne = nether/nether-located
 
 WORLDSEED = -609011479
 villagers:
-	masons:
-		missing green?
-	librarians:
-		mend 10, fortune 17, loot 21, thorns 15, power 20, eff 17, silk 5, bookshelf 9, unbreak 11, prot 32,
+    masons:
+        missing green?
+    librarians:
+        mend 10, fortune 17, loot 21, thorns 15, power 20, eff 17, silk 5, bookshelf 9, unbreak 11, prot 32,
         mend ?, depth 22, knock2 8, fireprot 17, sharp 20, resp 20, aqua 5
         missing: feather
 spawners:
-	cave-spider: 351, 15, 281
+    cave-spider: 351, 15, 281
 points-of-interest:
-	pillager-farm: 170, 119, 109
-	desert-lakes/hills: ow-to-ne-portal1, path at 65,44,48 then go 0,0,-1 direction to ne-to-ow-portal2
+    pillager-farm: 170, 119, 109
+    desert-lakes/hills: ow-to-ne-portal1, path at 65,44,48 then go 0,0,-1 direction to ne-to-ow-portal2
 ne-portals:
-	ow-to-ne-portal1: 193, 70, 317 to 26, 46, 48 (main ow portal)
-	ow-to-ne-portal2: 525,19,-2003 to 65,35,-250 (desert lakes portal)
-	ow-to-ne-portal3: -787, 70, -1918
+    ow-to-ne-portal1: 193, 70, 317 to 26, 46, 48 (main ow portal)
+    ow-to-ne-portal2: 525,19,-2003 to 65,35,-250 (desert lakes portal)
+    ow-to-ne-portal3: -787, 70, -1918
 recommended enchanments:
-	helmet: mending1, prot4, unbreaking3, thorns3, aquaAffinity1, respiration3 
-	chest: mending1, prot4, unbreaking3, thorns3
-	pants: mending1, prot4, unbreaking3, thorns3
-	boots: mending1, prot4, unbreaking3, thorns3, featherfalling3, depthStrider3, soulSpeed3 (optional)
-	pick: mending1, fortune3/silk1, unbreaking3, efficiency5
+    helmet: mending1, prot4, unbreaking3, thorns3, aquaAffinity1, respiration3
+    chest: mending1, prot4, unbreaking3, thorns3
+    pants: mending1, prot4, unbreaking3, thorns3
+    boots: mending1, prot4, unbreaking3, thorns3, featherfalling3, depthStrider3, soulSpeed3 (optional)
+    pick: mending1, fortune3/silk1, unbreaking3, efficiency5
     shov: mending1, fortune3/silk1, unbreaking3, efficiency5
-	axe: mending1, fortune3/silk1, unbreaking3, efficiency5, sharpness5
-	sword: mending1, fortune3/silk1, unbreaking3, sharpness5, fireAspect2
+    axe: mending1, fortune3/silk1, unbreaking3, efficiency5, sharpness5
+    sword: mending1, fortune3/silk1, unbreaking3, sharpness5, fireAspect2
     hoe, bow, trident # TODO:

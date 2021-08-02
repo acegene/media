@@ -52,5 +52,3 @@ else:
             break
         else:
             print("ERROR: respond with yes/no")
-
-
