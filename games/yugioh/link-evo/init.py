@@ -15,7 +15,6 @@ dir_save_repo = os.path.join(os.path.dirname(os.path.abspath(__file__)), "save")
 dir_steam_userdata = r"C:\Program Files (x86)\Steam\userdata"
 dir_rel_game_id = r"1150640\remote"
 
-dirs_game_id = []
 dirs_save = []
 
 assert os.path.isdir(dir_steam_userdata)
