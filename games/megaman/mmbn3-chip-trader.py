@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+#
 # type: ignore # TODO
 
 import csv

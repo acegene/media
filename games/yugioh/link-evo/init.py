@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+#
 # Adds a symlink to the save dir of this repo
 #
 # prereqs
