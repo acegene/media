@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-
 import csv
-
-from typing import List
 
 from utils import path_utils
 
@@ -15,7 +12,7 @@ HEADER_NAME_TO_INDEX = {
 
 
 def main() -> None:
-    rows_reconstructed: List[List[str]] = []
+    rows_reconstructed: list[list[str]] = []
 
     with path_utils.open_unix_safely("mmbn3-chip-trader.csv") as csvfile:
         spamreader = csv.reader(csvfile, delimiter=" ", quotechar="|")
@@ -48,7 +45,7 @@ def main() -> None:
         rows_alpha_split.append(row_alpha_split)
 
     print(
-        "num,name,code,star,higsby_3,hospital_10,dnn_10,bugfrag_10,*,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"
+        "num,name,code,star,higsby_3,hospital_10,dnn_10,bugfrag_10,*,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z",
     )
     for row in rows_alpha_split:
         print(",".join([r if r != "" else "x" for r in row]))
